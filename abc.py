@@ -20,6 +20,6 @@ with col2:
   bottom_type = st.radio("종류",["청바지","슬랙스","트레이닝 팬츠","반바지"])
   bottom_color = st.select_slider("핏(Fit)",options=["슬림","레귤러","오버핏"])
   st.header("디테일 추가")
-  tab1,tab2 = (["신발"."액세서리"])
+  tab1,tab2 = (["신발", "액세서리"])
   with tab1:
         
