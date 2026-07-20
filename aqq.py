@@ -2,16 +2,14 @@ import streamlit as st
 import time
 
 def reset_game():
-  st.session_state.start_time = 0
-  st.session_state.end_time = 0
-  st.session_state.result = 0
-
+    st.session_state.start_time = 0
+    st.session_state.end_time = 0
+    st.session_state.result = 0
 if 'start_time' not in st.session_state:
     reset_game()
 
 st.title("10초 맞추기 게임!")
 st.write("시작 버튼을 누르고, 마음속으로 10초를 센 뒤 종료 버튼을 누르세요.")
-
 col1, col2 = st.columns(2)
 with col1:
     if st.button("시작"):
@@ -24,8 +22,8 @@ with col2:
             # 걸린 시간 계산 (종료 시간 - 시작 시간)
             st.session_state.result = st.session_state.end_time - st.session_state.start_time
             st.session_state.start_time = 0
-   else:
-      st.warning("시작 버튼을 먼저 눌러주세요!")
+        else:
+            st.warning("시작 버튼을 먼저 눌러주세요!")
 
 if st.session_state.end_time != 0:
     diff = st.session_state.result
