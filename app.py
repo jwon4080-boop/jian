@@ -4,5 +4,12 @@ st.markdown("# 앱UI만들기")
 user_id = st.text_input("이름", placeholder="이름")
 ai_model = st.radio("학년", ["1", "2", "3"], horizontal=True)
 cls = st.number_input("반", value="1")
-user_id = st.text_input("아이디(ID)를 입력하세요", placeholder="example_user")
-age = st.number_input("나이를 입력하세요", min_value=1, max_value=100, value=17)
+level = st.select_slider("난이도", ["쉬움","보통","어려움"])
+num = st.slider("점수",0,100,50)
+text = st.text_area("소감", placeholder="소감입니다.")
+if st.button("질문 전송하기"):
+  st.success(f" {uer_id}/{graduate}학년/{cls}반/{level}")
+  st.markdown(f"""
+  점수:'(num)'
+  """)
+  st.info(f"소감:{text}")
