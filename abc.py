@@ -21,7 +21,7 @@ with col2:
   bottom_color = st.select_slider("핏(Fit)",options=["슬림","레귤러","오버핏"])
   st.header("디테일 추가")
   tab1,tab2 = (["신발", "액세서리"])
-with  tab1:
+with tab1:
   st.write("오늘의 발걸음을 책일질 신발:")
   shoes = st.selectbox("신발 선택 팁 보기")
   st.info("너무 튀는 신발은 지양하도록 하세요!")
