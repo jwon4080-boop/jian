@@ -1,4 +1,4 @@
 import streamlist as st
 
-st.title("나의 웹앱")
-st.write("안녕하세요")
+st.title("my webapp")
+st.write("hello world")
