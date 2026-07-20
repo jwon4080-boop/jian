@@ -1,7 +1,7 @@
 import streamlit as st
 
 def reset_all():
-  st.seossion_state.user_name = "
+  st.seossion_state.user_name = ""
   st.seossion_state.weather = "맑음"
   st.seossion_state.top_type = "후드티"
   st.seossion_state.top_color = "밝음"
