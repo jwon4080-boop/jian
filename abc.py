@@ -56,3 +56,5 @@ with tab2:
       with st.expander("코디 연출 팁 영상 보기"):
         st.video("https://www.youtube.com/watch?v=1kMZ8yt1y1k")
         st.write("전문가가 제안하 코디 연출법을 참고하세요.")
+
+st.button("전체 초기화", on_click=resent_all)
