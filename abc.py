@@ -1,9 +1,19 @@
 import streamlit as st
 
+def reset_all():
+  st.seossion_state.user_name = "
+  st.seossion_state.weather = "맑음"
+  st.seossion_state.top_type = "후드티"
+  st.seossion_state.top_color = "밝음"
+  st.seossion_state.bottom_type = "청바지"
+  st.seossion_state.bottom_color = "슬림"
+  st.seossion_state.shoes = "스니커즈"
+  st.seossion_state.acc = []
+    
 with st.sidebar:
   st.header("프로필")
-  user_name = st.text_input("닉네임")
-  weather = st.selectbox("오늘 날씨",["맑음", "흐림", "비/눈", "매우 추움"])
+  user_name = st.text_input("닉네임", key="user_name")
+  weather = st.selectbox("오늘 날씨",["맑음", "흐림", "비/눈", "매우 추움"],key="weather")
   st.markdown("---")
   st.info(f"반가워요, {user_name}님! 오늘 날씨는 '{weather}'이네요.")
 
