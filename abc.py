@@ -10,7 +10,7 @@ with st.sidebar:
 st.title("👗AI 코디 메이커")
 st.write("사이드바에서 날씨를 먼저 선택하고 시작하세요!")
 st.header("👕아이템 조합하기")
-col1, col2 = st.tabs(["A","B"])
+col1, col2 = st.columns(2)
 with col1:
    st.subheader("상의")
    top_type = st.radio("종류", ["후드티","셔츠","맨투맨","반팔 티셔츠"])
@@ -21,3 +21,12 @@ with col2:
   bottom_color = st.select_slider("핏(Fit)",options=["슬림","레귤러","오버핏"])
   st.header("디테일 추가")
   tab1,tab2 = (["신발", "액세서리"])
+ with tab1:
+   st.write("오늘의 발걸음을 책일질 신발:")
+   shoes = st.selectbox("신발 선택 팁 보기"):
+   st.info("너무 튀는 신발은 지양하도록 하세요!")
+with tab2:
+  st.write("포인트 아이템:")
+  acc = st.multiselect("액세서리 추가", ["모자","안경","목걸이","가방"])
+  with st.expander("액세서리 스타일링 팁 보기"):
+    st.warning("너무 많은 액세서리는 투머치가 될 수 있어오.")
