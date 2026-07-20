@@ -23,7 +23,7 @@ with col2:
 tab1,tab2 = st.tabs(["신발", "액세서리"])
 with tab1:
   st.write("오늘의 발걸음을 책일질 신발:")
-  shoes = st.selectbox("신발 선택 팁 보기")
+  shoes = st.selectbox("신발 선택 팁 보기"):
   st.info("너무 튀는 신발은 지양하도록 하세요!")
 with tab2:
   st.write("포인트 아이템:")
