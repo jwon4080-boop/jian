@@ -31,7 +31,7 @@ with tab2:
   with st.expander("액세서리 스타일링 팁 보기"):
     st.warning("너무 많은 액세서리는 투머치가 될 수 있어오.")
     st.markdown("---")
-    if st.button("코디 완성하기"):
+    if st.button("코디 완성하기")
       st.container(border=True):
       st.subheader(f"{user_name}님의 오늘의 룩북")
       st.write(f"오늘 같은**{weather}**날씨에는 이렇게 입어보세요!")
