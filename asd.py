@@ -35,7 +35,7 @@ def page_2():
         with col_btn:
            if st.button("완료", key=f"btn_{i}"):
                st.session_state.todo_list[i][1] = True
-             st.rerun()
+               st.rerun()
     with col_status:
         if st.session_state.todo_list[i][1]:
             st.write("✅ **달성!**")
