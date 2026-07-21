@@ -33,13 +33,13 @@ def page_2():
         with col_task:
             st.write(f"{i+1}. {st.session_state.todo_list[i][0]}")
         with col_btn:
-           if st.button("완료", key=f"btn_{i}"):
-               st.session_state.todo_list[i][1] = True
-               st.rerun()
+            if st.button("완료", key=f"btn_{i}"):
+                st.session_state.todo_list[i][1] = True
+                st.rerun()
        with col_status:
-          if st.session_state.todo_list[i][1]:
-             st.write("✅ **달성!**")
-st.markdown("---")
+           if st.session_state.todo_list[i][1]:
+               st.write("✅ **달성!**")
+    st.markdown("---")
 def page_3():
     st.header("📈 3. 나의 갓생 지수")
     if not st.session_state.todo_list:
@@ -50,9 +50,9 @@ def page_3():
         for item in st.session_state.todo_list:
             if item[1] == True:
                count += 1
-    progress = (count / total) * 100
-    st.metric("오늘의 달성률", f"{progress:.1f}%")
-    st.progress(progress / 100)
+       progress = (count / total) * 100
+       st.metric("오늘의 달성률", f"{progress:.1f}%")
+       st.progress(progress / 100)
     if st.button("기록 전체 초기화"):
         st.session_state.todo_list = []
         st.rerun()
