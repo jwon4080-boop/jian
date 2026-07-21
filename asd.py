@@ -36,9 +36,9 @@ def page_2():
            if st.button("완료", key=f"btn_{i}"):
                st.session_state.todo_list[i][1] = True
                st.rerun()
-    with col_status:
-        if st.session_state.todo_list[i][1]:
-            st.write("✅ **달성!**")
+       with col_status:
+          if st.session_state.todo_list[i][1]:
+              st.write("✅ **달성!**")
 st.markdown("---")
 def page_3():
     st.header("📈 3. 나의 갓생 지수")
@@ -60,5 +60,6 @@ def page_3():
 pg = st.navigation([
     st.Page(page_1, title="오늘의 다짐"),
     st.Page(page_2, title="오늘의 할 일"),
-    st.Page(page_3, title="나의 갓생 지수")])
+    st.Page(page_3, title="나의 갓생 지수")
+])
 pg.run()
