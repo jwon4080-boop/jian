@@ -1,4 +1,7 @@
 import streamlit as st
+
+def reset_all():
+    st.session_state.clear()
 from openai import OpenAI
 
 client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
