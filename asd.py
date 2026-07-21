@@ -32,10 +32,10 @@ def page_2():
         col_task, col_btn, col_status = st.columns([4, 1, 1])
         with col_task:
             st.write(f"{i+1}. {st.session_state.todo_list[i][0]}")
-       with col_btn:
-          if st.button("완료", key=f"btn_{i}"):
-              st.session_state.todo_list[i][1] = True
-            st.rerun()
+        with col_btn:
+           if st.button("완료", key=f"btn_{i}"):
+               st.session_state.todo_list[i][1] = True
+             st.rerun()
     with col_status:
         if st.session_state.todo_list[i][1]:
             st.write("✅ **달성!**")
