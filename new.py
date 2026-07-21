@@ -76,3 +76,5 @@ VOC: {voc} ppb
 
     st.subheader("🌱 AI 환경 분석 결과")
     st.write(response.output_text)
+
+st.button("전체 초기화", on_click=reset_all)
