@@ -13,6 +13,6 @@ pm10 = st.number_input(
 )
 pm25 = st.number_input(
     "초미세먼지 pm2.5 (㎍/㎥)",
-    min_value=0,0
+    min_value=0.0,
     value=15.0
 )
