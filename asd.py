@@ -76,8 +76,7 @@ def page_report():
             st.session_state.todo_list = []
             st.rerun()
 
-pg = st.navigation([
-    def page_ai_coach():
+pg = st.navigation([def page_ai_coach]):
     st.header("🤖 AI 코치와 대화하기")
 
     prompt = st.text_input("질문을 입력하세요")
