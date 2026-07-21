@@ -70,7 +70,7 @@ VOC: {voc} ppb
 6. 종합 환경 점수 (100점 기준)
 """
 
-    with st.spinner("AI가 환경 데이터를 분석 중입니다."):
+    with st.spinner("🤖AI가 환경 데이터를 분석 중입니다.🤖"):
 
          response = client.responses.create(
              model="gpt-4o-mini",
