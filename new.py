@@ -37,3 +37,42 @@ water = st.number_input(
        max_value=100,
        value=20
 )
+if st.button("🤖 오염도 분석하기"):
+
+    data = f"""
+환경 측정 데이터
+
+PM10: {pm10} ㎍/㎥
+PM2.5: {pm25} ㎍/㎥
+CO₂: {co2} ppm
+CO: {co} ppm
+VOC: {voc} ppb
+수질 오염도: {water}/100
+"""
+
+    prompt = f"""
+너는 환경 분석 전문가 AI이다.
+
+다음 데이터를 분석해라.
+
+{data}
+
+다음 형식으로 답변해라.
+
+1. 전체 환경 상태 평가
+2. 각 오염 물질별 위험도
+3. 가장 문제가 되는 오염 물질
+4. 건강 및 생태계 영향
+5. 환경 개선 방법
+6. 종합 환경 점수 (100점 기준)
+"""
+
+    with st.spinner("AI가 환경 데이터를 분석 중입니다."):
+
+        response = client.responses.create(
+            model="gpt-5.5",
+            input=prompt
+        )
+
+    st.subheader("🌱 AI 환경 분석 결과")
+    st.write(response.output_text)
