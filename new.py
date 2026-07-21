@@ -27,7 +27,7 @@ co = st.number_input(
     value=1.0
 )
 voc = st.number_input(
-    "휘발성 유기 화합물 VOC (ppb)"
+    "휘발성 유기 화합물 VOC (ppb)",
     min_value=0.0,
     value=100.0
 )
