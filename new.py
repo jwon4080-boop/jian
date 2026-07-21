@@ -69,7 +69,7 @@ VOC: {voc} ppb
 
     with st.spinner("AI가 환경 데이터를 분석 중입니다."):
 
-        response = client.responses.create(
+         response = client.responses.create(
             model="gpt-5.5",
             input=prompt
         )
