@@ -18,7 +18,7 @@ def page_1():
     if st.button("다짐 저장"):
         st.session_state.user_motto = motto
         st.success("좌우명이 등록되었습니다!")
-   st.markdown("---")
+        st.markdown("---")
 def page_2():
     st.header("✅ 2. 오늘의 할 일")
     st.write(f"현재 다짐: **{st.session_state.user_motto}**")
