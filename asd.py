@@ -48,8 +48,8 @@ def page_3():
         total = len(st.session_state.todo_list)
         count = 0
         for item in st.session_state.todo_list:
-        if item[1] == True:
-            count += 1
+            if item[1] == True:
+               count += 1
     progress = (count / total) * 100
     st.metric("오늘의 달성률", f"{progress:.1f}%")
     st.progress(progress / 100)
@@ -58,7 +58,7 @@ def page_3():
         st.rerun()
 
 pg = st.navigation([
-    st.page(page1, title="오늘의 다짐"),
-    st.page(page2, title="오늘의 할 일"),
-    st.page(page3, title="나의 갓생 지수")])
+    st.Page(page1, title="오늘의 다짐"),
+    st.Page(page2, title="오늘의 할 일"),
+    st.Page(page3, title="나의 갓생 지수")])
 pg.run()
